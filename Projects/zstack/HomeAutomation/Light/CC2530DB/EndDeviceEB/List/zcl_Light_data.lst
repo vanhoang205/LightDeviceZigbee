@@ -1,0 +1,1321 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.20.1.5333 for 8051               29/Jul/2020  09:18:35
+# Copyright 2004-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\Source\zcl_Light_data.c
+#    Command line       =  
+#        -f C:\Users\TS-577\AppData\Local\Temp\EW5BD9.tmp
+#        ("C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\Source\zcl_Light_data.c"
+#        -D BDB_REPORTING -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D
+#        NV_RESTORE -D xPOWER_SAVING -D NWK_AUTO_POLL -D xZTOOL_P1 -D xMT_TASK
+#        -D xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D
+#        xMT_APP_CNF_FUNC -D xLCD_SUPPORTED=DEBUG -D MULTICAST_ENABLED=FALSE -D
+#        ZCL_READ -D ZCL_DISCOVER -D ZCL_WRITE -D ZCL_BASIC -D ZCL_IDENTIFY -D
+#        ZCL_ON_OFF -D ZCL_SCENES -D ZCL_GROUPS -D ZCL_ON_OFF -D REFLECTOR -D
+#        xZCL_REPORT -lC "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\EndDeviceEB\List"
+#        -lA "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\EndDeviceEB\List"
+#        --diag_suppress Pe001,Pa010 -o "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\EndDeviceEB\Obj"
+#        -e --debug --core=plain --dptr=16,1 --data_model=large
+#        --code_model=banked --calling_convention=xdata_reentrant
+#        --place_constants=data_rom --nr_virtual_regs 16 -f
+#        "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f
+#        "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x00002000 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
+#        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=TRUE -DPOLL_RATE=1000
+#        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
+#        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
+#        -f "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\Source\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\Source\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\mt\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        -Ohz --require_prototypes)
+#    Locale             =  Japanese_JPN.932
+#    List file          =  
+#        C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\EndDeviceEB\List\zcl_Light_data.lst
+#    Object file        =  
+#        C:\Users\TS-577\Desktop\Zigbee
+#        workspace\LightDevice\Projects\zstack\HomeAutomation\Light\CC2530DB\EndDeviceEB\Obj\zcl_Light_data.r51
+#
+###############################################################################
+
+C:\Users\TS-577\Desktop\Zigbee workspace\LightDevice\Projects\zstack\HomeAutomation\Light\Source\zcl_Light_data.c
+      1          /**************************************************************************************************
+      2            Filename:       zcl_samplelight_data.c
+      3            Revised:        $Date: 2014-05-12 13:14:02 -0700 (Mon, 12 May 2014) $
+      4            Revision:       $Revision: 38502 $
+      5          
+      6          
+      7            Description:    Zigbee Cluster Library - sample device application.
+      8          
+      9          
+     10            Copyright 2006-2014 Texas Instruments Incorporated. All rights reserved.
+     11          
+     12            IMPORTANT: Your use of this Software is limited to those specific rights
+     13            granted under the terms of a software license agreement between the user
+     14            who downloaded the software, his/her employer (which must be your employer)
+     15            and Texas Instruments Incorporated (the "License").  You may not use this
+     16            Software unless you agree to abide by the terms of the License. The License
+     17            limits your use, and you acknowledge, that the Software may not be modified,
+     18            copied or distributed unless embedded on a Texas Instruments microcontroller
+     19            or used solely and exclusively in conjunction with a Texas Instruments radio
+     20            frequency transceiver, which is integrated into your product.  Other than for
+     21            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     22            works of, modify, distribute, perform, display or sell this Software and/or
+     23            its documentation for any purpose.
+     24          
+     25            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     26            PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     27            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     28            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     29            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     30            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     31            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     32            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     33            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     34            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     35            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     36          
+     37            Should you have any questions regarding your right to use this Software,
+     38            contact Texas Instruments Incorporated at www.TI.com.
+     39          **************************************************************************************************/
+     40          
+     41          /*********************************************************************
+     42           * INCLUDES
+     43           */
+     44          #include "ZComDef.h"
+     45          #include "OSAL.h"
+     46          #include "AF.h"
+     47          #include "ZDConfig.h"
+     48          
+     49          #include "zcl.h"
+     50          #include "zcl_general.h"
+     51          #include "zcl_ha.h"
+     52          
+     53          
+     54          #include "zcl_Light.h"
+     55          
+     56          /*********************************************************************
+     57           * CONSTANTS
+     58           */
+     59          
+     60          #define LIGHT_DEVICE_VERSION     1
+     61          #define LIGHT_FLAGS              0
+     62          
+     63          #define LIGHT_HWVERSION          1
+     64          #define LIGHT_ZCLVERSION         1
+     65          
+     66          #define DEFAULT_PHYSICAL_ENVIRONMENT 0
+     67          #define DEFAULT_DEVICE_ENABLE_STATE DEVICE_ENABLED
+     68          #define DEFAULT_IDENTIFY_TIME 0
+     69          
+     70          #define DEFAULT_ON_OFF_STATE            LIGHT_OFF
+     71          
+     72          /*********************************************************************
+     73           * TYPEDEFS
+     74           */
+     75          
+     76          /*********************************************************************
+     77           * MACROS
+     78           */
+     79          
+     80          /*********************************************************************
+     81           * GLOBAL VARIABLES
+     82           */
+     83           
+     84          //global attributes
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     85          const uint16 zclLight_clusterRevision_all = 0x0001; //currently all cluster implementations are according to ZCL6, which has revision #1. In the future it is possible that different clusters will have different revisions, so they will have to use separate attribute variables.
+   \                     zclLight_clusterRevision_all:
+   \   000000   0100         DW 1
+     86          
+     87          // Basic Cluster
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     88          const uint8 zclLight_HWRevision_1 = LIGHT_HWVERSION;
+   \                     zclLight_HWRevision_1:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     89          const uint8 zclLight_ZCLVersion_1 = LIGHT_ZCLVERSION;
+   \                     zclLight_ZCLVersion_1:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     90          const uint8 zclLight_ManufacturerName_1[] = { 16, 'I','T','S','C','-','R','D','-','T','e','c','h',' ',' ',' ',' ' };
+   \                     zclLight_ManufacturerName_1:
+   \   000000   10           DB 16
+   \   000001   49           DB 73
+   \   000002   54           DB 84
+   \   000003   53           DB 83
+   \   000004   43           DB 67
+   \   000005   2D           DB 45
+   \   000006   52           DB 82
+   \   000007   44           DB 68
+   \   000008   2D           DB 45
+   \   000009   54           DB 84
+   \   00000A   65           DB 101
+   \   00000B   63           DB 99
+   \   00000C   68           DB 104
+   \   00000D   20           DB 32
+   \   00000E   20           DB 32
+   \   00000F   20           DB 32
+   \   000010   20           DB 32
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     91          const uint8 zclLight_ModelId_1[] = { 16, 'I','T','S','C','0','0','0','2',' ',' ',' ',' ',' ',' ',' ',' ' };
+   \                     zclLight_ModelId_1:
+   \   000000   10           DB 16
+   \   000001   49           DB 73
+   \   000002   54           DB 84
+   \   000003   53           DB 83
+   \   000004   43           DB 67
+   \   000005   30           DB 48
+   \   000006   30           DB 48
+   \   000007   30           DB 48
+   \   000008   32           DB 50
+   \   000009   20           DB 32
+   \   00000A   20           DB 32
+   \   00000B   20           DB 32
+   \   00000C   20           DB 32
+   \   00000D   20           DB 32
+   \   00000E   20           DB 32
+   \   00000F   20           DB 32
+   \   000010   20           DB 32
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     92          const uint8 zclLight_DateCode_1[] = { 16, '2','0','0','6','0','8','3','1',' ',' ',' ',' ',' ',' ',' ',' ' };
+   \                     zclLight_DateCode_1:
+   \   000000   10           DB 16
+   \   000001   32           DB 50
+   \   000002   30           DB 48
+   \   000003   30           DB 48
+   \   000004   36           DB 54
+   \   000005   30           DB 48
+   \   000006   38           DB 56
+   \   000007   33           DB 51
+   \   000008   31           DB 49
+   \   000009   20           DB 32
+   \   00000A   20           DB 32
+   \   00000B   20           DB 32
+   \   00000C   20           DB 32
+   \   00000D   20           DB 32
+   \   00000E   20           DB 32
+   \   00000F   20           DB 32
+   \   000010   20           DB 32
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     93          const uint8 zclLight_PowerSource_1 = POWER_SOURCE_MAINS_1_PHASE;
+   \                     zclLight_PowerSource_1:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     94          uint8 zclLight_LocationDescription_1[17];
+   \                     zclLight_LocationDescription_1:
+   \   000000                DS 17
+   \   000011                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     95          uint8 zclLight_PhysicalEnvironment_1 = 0x0B;    //office
+   \                     zclLight_PhysicalEnvironment_1:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zclLight_PhysicalEnvironment`
+   \   000001                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     96          uint8 zclLight_DeviceEnable_1;
+   \                     zclLight_DeviceEnable_1:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     97          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     98          const uint8 zclLight_HWRevision_2 = LIGHT_HWVERSION;
+   \                     zclLight_HWRevision_2:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     99          const uint8 zclLight_ZCLVersion_2 = LIGHT_ZCLVERSION;
+   \                     zclLight_ZCLVersion_2:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ROM_C, align 1
+    100          const uint8 zclLight_ManufacturerName_2[] = { 16, 'I','T','S','C','-','R','D','-','T','e','c','h',' ',' ',' ',' ' };
+   \                     zclLight_ManufacturerName_2:
+   \   000000   10           DB 16
+   \   000001   49           DB 73
+   \   000002   54           DB 84
+   \   000003   53           DB 83
+   \   000004   43           DB 67
+   \   000005   2D           DB 45
+   \   000006   52           DB 82
+   \   000007   44           DB 68
+   \   000008   2D           DB 45
+   \   000009   54           DB 84
+   \   00000A   65           DB 101
+   \   00000B   63           DB 99
+   \   00000C   68           DB 104
+   \   00000D   20           DB 32
+   \   00000E   20           DB 32
+   \   00000F   20           DB 32
+   \   000010   20           DB 32
+
+   \                                 In  segment XDATA_ROM_C, align 1
+    101          const uint8 zclLight_ModelId_2[] = { 16, 'I','T','S','C','0','0','0','3',' ',' ',' ',' ',' ',' ',' ',' ' };
+   \                     zclLight_ModelId_2:
+   \   000000   10           DB 16
+   \   000001   49           DB 73
+   \   000002   54           DB 84
+   \   000003   53           DB 83
+   \   000004   43           DB 67
+   \   000005   30           DB 48
+   \   000006   30           DB 48
+   \   000007   30           DB 48
+   \   000008   33           DB 51
+   \   000009   20           DB 32
+   \   00000A   20           DB 32
+   \   00000B   20           DB 32
+   \   00000C   20           DB 32
+   \   00000D   20           DB 32
+   \   00000E   20           DB 32
+   \   00000F   20           DB 32
+   \   000010   20           DB 32
+
+   \                                 In  segment XDATA_ROM_C, align 1
+    102          const uint8 zclLight_DateCode_2[] = { 16, '2','0','0','6','0','8','3','1',' ',' ',' ',' ',' ',' ',' ',' ' };
+   \                     zclLight_DateCode_2:
+   \   000000   10           DB 16
+   \   000001   32           DB 50
+   \   000002   30           DB 48
+   \   000003   30           DB 48
+   \   000004   36           DB 54
+   \   000005   30           DB 48
+   \   000006   38           DB 56
+   \   000007   33           DB 51
+   \   000008   31           DB 49
+   \   000009   20           DB 32
+   \   00000A   20           DB 32
+   \   00000B   20           DB 32
+   \   00000C   20           DB 32
+   \   00000D   20           DB 32
+   \   00000E   20           DB 32
+   \   00000F   20           DB 32
+   \   000010   20           DB 32
+
+   \                                 In  segment XDATA_ROM_C, align 1
+    103          const uint8 zclLight_PowerSource_2 = POWER_SOURCE_MAINS_1_PHASE;
+   \                     zclLight_PowerSource_2:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    104          uint8 zclLight_LocationDescription_2[17];       
+   \                     zclLight_LocationDescription_2:
+   \   000000                DS 17
+   \   000011                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    105          uint8 zclLight_PhysicalEnvironment_2 = 0x0B;    //office
+   \                     zclLight_PhysicalEnvironment_2:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zclLight_PhysicalEnvironment_1`
+   \   000001                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    106          uint8 zclLight_DeviceEnable_2;
+   \                     zclLight_DeviceEnable_2:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    107          
+    108          // Identify Cluster
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    109          uint16 zclLight_IdentifyTime_1;         // set 0 value for identify (mandatory)
+   \                     zclLight_IdentifyTime_1:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    110          uint16 zclLight_IdentifyTime_2;         // set 0 value for identify (mandatory)
+   \                     zclLight_IdentifyTime_2:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+    111          
+    112          // Groups Cluster
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    113          uint8 zclLight_GroupsNameSupport_1 = 0;
+   \                     zclLight_GroupsNameSupport_1:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    114          uint8 zclLight_GroupsNameSupport_2 = 0;
+   \                     zclLight_GroupsNameSupport_2:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    115          
+    116          // On/Off Cluster
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    117          uint8  zclLight_OnOff_1;
+   \                     zclLight_OnOff_1:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+    118          uint8  zclLight_OnOff_2;
+   \                     zclLight_OnOff_2:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+    119          
+    120          /*********************************************************************
+    121           * ATTRIBUTE DEFINITIONS - Uses REAL cluster IDs
+    122           */
+    123          
+    124          // NOTE: The attributes listed in the AttrRec must be in ascending order 
+    125          // per cluster to allow right function of the Foundation discovery commands
+    126           
+
+   \                                 In  segment CODE_C, align 1
+    127          CONST zclAttrRec_t zclLight_Attrs_1[] =
+   \                     zclLight_Attrs_1:
+   \   000000   0000         DW 0
+   \   000002   0000         DW 0
+   \   000004   20           DB 32
+   \   000005   01           DB 1
+   \   000006   ....         DW zclLight_ZCLVersion_1
+   \   000008   0000         DW 0
+   \   00000A   0300         DW 3
+   \   00000C   20           DB 32
+   \   00000D   01           DB 1
+   \   00000E   ....         DW zclLight_HWRevision_1
+   \   000010   0000         DW 0
+   \   000012   0400         DW 4
+   \   000014   42           DB 66
+   \   000015   01           DB 1
+   \   000016   ....         DW zclLight_ManufacturerName_1
+   \   000018   0000         DW 0
+   \   00001A   0500         DW 5
+   \   00001C   42           DB 66
+   \   00001D   01           DB 1
+   \   00001E   ....         DW zclLight_ModelId_1
+   \   000020   0000         DW 0
+   \   000022   0600         DW 6
+   \   000024   42           DB 66
+   \   000025   01           DB 1
+   \   000026   ....         DW zclLight_DateCode_1
+   \   000028   0000         DW 0
+   \   00002A   0700         DW 7
+   \   00002C   30           DB 48
+   \   00002D   01           DB 1
+   \   00002E   ....         DW zclLight_PowerSource_1
+   \   000030   0000         DW 0
+   \   000032   1000         DW 16
+   \   000034   42           DB 66
+   \   000035   03           DB 3
+   \   000036   ....         DW zclLight_LocationDescription_1
+   \   000038   0000         DW 0
+   \   00003A   1100         DW 17
+   \   00003C   30           DB 48
+   \   00003D   03           DB 3
+   \   00003E   ....         DW zclLight_PhysicalEnvironment_1
+   \   000040   0000         DW 0
+   \   000042   1200         DW 18
+   \   000044   10           DB 16
+   \   000045   03           DB 3
+   \   000046   ....         DW zclLight_DeviceEnable_1
+   \   000048   0000         DW 0
+   \   00004A   FDFF         DW 65533
+   \   00004C   21           DB 33
+   \   00004D   01           DB 1
+   \   00004E   ....         DW zclLight_clusterRevision_all
+   \   000050   0300         DW 3
+   \   000052   0000         DW 0
+   \   000054   21           DB 33
+   \   000055   03           DB 3
+   \   000056   ....         DW zclLight_IdentifyTime_1
+   \   000058   0300         DW 3
+   \   00005A   FDFF         DW 65533
+   \   00005C   21           DB 33
+   \   00005D   01           DB 1
+   \   00005E   ....         DW zclLight_clusterRevision_all
+   \   000060   0600         DW 6
+   \   000062   0000         DW 0
+   \   000064   10           DB 16
+   \   000065   05           DB 5
+   \   000066   ....         DW zclLight_OnOff_1
+   \   000068   0600         DW 6
+   \   00006A   FDFF         DW 65533
+   \   00006C   21           DB 33
+   \   00006D   01           DB 1
+   \   00006E   ....         DW zclLight_clusterRevision_all
+   \   000070   0400         DW 4
+   \   000072   0000         DW 0
+   \   000074   18           DB 24
+   \   000075   01           DB 1
+   \   000076   ....         DW zclLight_GroupsNameSupport_1
+   \   000078   0400         DW 4
+   \   00007A   FDFF         DW 65533
+   \   00007C   21           DB 33
+   \   00007D   01           DB 1
+   \   00007E   ....         DW zclLight_clusterRevision_all
+   \   000080   0500         DW 5
+   \   000082   FDFF         DW 65533
+   \   000084   21           DB 33
+   \   000085   01           DB 1
+   \   000086   ....         DW zclLight_clusterRevision_all
+    128          {
+    129            // *** General Basic Cluster Attributes ***
+    130            {
+    131              ZCL_CLUSTER_ID_GEN_BASIC,
+    132              { // Attribute record
+    133                ATTRID_BASIC_ZCL_VERSION,
+    134                ZCL_DATATYPE_UINT8,
+    135                ACCESS_CONTROL_READ,
+    136                (void *)&zclLight_ZCLVersion_1
+    137              }
+    138            },
+    139            {
+    140              ZCL_CLUSTER_ID_GEN_BASIC,             // Cluster IDs - defined in the foundation (ie. zcl.h)
+    141              {  // Attribute record
+    142                ATTRID_BASIC_HW_VERSION,            // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+    143                ZCL_DATATYPE_UINT8,                 // Data Type - found in zcl.h
+    144                ACCESS_CONTROL_READ,                // Variable access control - found in zcl.h
+    145                (void *)&zclLight_HWRevision_1      // Pointer to attribute variable
+    146              }
+    147            },
+    148            {
+    149              ZCL_CLUSTER_ID_GEN_BASIC,
+    150              { // Attribute record
+    151                ATTRID_BASIC_MANUFACTURER_NAME,
+    152                ZCL_DATATYPE_CHAR_STR,
+    153                ACCESS_CONTROL_READ,
+    154                (void *)zclLight_ManufacturerName_1
+    155              }
+    156            },
+    157            {
+    158              ZCL_CLUSTER_ID_GEN_BASIC,
+    159              { // Attribute record
+    160                ATTRID_BASIC_MODEL_ID,
+    161                ZCL_DATATYPE_CHAR_STR,
+    162                ACCESS_CONTROL_READ,
+    163                (void *)zclLight_ModelId_1
+    164              }
+    165            },
+    166            {
+    167              ZCL_CLUSTER_ID_GEN_BASIC,
+    168              { // Attribute record
+    169                ATTRID_BASIC_DATE_CODE,
+    170                ZCL_DATATYPE_CHAR_STR,
+    171                ACCESS_CONTROL_READ,
+    172                (void *)zclLight_DateCode_1
+    173              }
+    174            },
+    175            {
+    176              ZCL_CLUSTER_ID_GEN_BASIC,
+    177              { // Attribute record
+    178                ATTRID_BASIC_POWER_SOURCE,
+    179                ZCL_DATATYPE_ENUM8,
+    180                ACCESS_CONTROL_READ,
+    181                (void *)&zclLight_PowerSource_1
+    182              }
+    183            },
+    184            {
+    185              ZCL_CLUSTER_ID_GEN_BASIC,
+    186              { // Attribute record
+    187                ATTRID_BASIC_LOCATION_DESC,
+    188                ZCL_DATATYPE_CHAR_STR,
+    189                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    190                (void *)zclLight_LocationDescription_1
+    191              }
+    192            },
+    193            {
+    194              ZCL_CLUSTER_ID_GEN_BASIC,
+    195              { // Attribute record
+    196                ATTRID_BASIC_PHYSICAL_ENV,
+    197                ZCL_DATATYPE_ENUM8,
+    198                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    199                (void *)&zclLight_PhysicalEnvironment_1
+    200              }
+    201            },
+    202            {
+    203              ZCL_CLUSTER_ID_GEN_BASIC,
+    204              { // Attribute record
+    205                ATTRID_BASIC_DEVICE_ENABLED,
+    206                ZCL_DATATYPE_BOOLEAN,
+    207                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    208                (void *)&zclLight_DeviceEnable_1
+    209              }
+    210            },
+    211            {
+    212              ZCL_CLUSTER_ID_GEN_BASIC,
+    213              {  // Attribute record
+    214                ATTRID_CLUSTER_REVISION,
+    215                ZCL_DATATYPE_UINT16,
+    216                ACCESS_CONTROL_READ,
+    217                (void *)&zclLight_clusterRevision_all
+    218              }
+    219            },
+    220          #ifdef ZCL_IDENTIFY
+    221            // *** Identify Cluster Attribute ***
+    222            {
+    223              ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    224              { // Attribute record
+    225                ATTRID_IDENTIFY_TIME,
+    226                ZCL_DATATYPE_UINT16,
+    227                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    228                (void *)&zclLight_IdentifyTime_1
+    229              }
+    230            },
+    231            {
+    232              ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    233              {  // Attribute record
+    234                ATTRID_CLUSTER_REVISION,
+    235                ZCL_DATATYPE_UINT16,
+    236                ACCESS_CONTROL_READ,
+    237                (void *)&zclLight_clusterRevision_all
+    238              }
+    239            },  
+    240          #endif
+    241          
+    242            // *** On/Off Cluster Attributes ***
+    243            {
+    244              ZCL_CLUSTER_ID_GEN_ON_OFF,
+    245              { // Attribute record
+    246                ATTRID_ON_OFF,
+    247                ZCL_DATATYPE_BOOLEAN,
+    248                ACCESS_CONTROL_READ | ACCESS_REPORTABLE,
+    249                (void *)&zclLight_OnOff_1
+    250              }
+    251            },
+    252            {
+    253              ZCL_CLUSTER_ID_GEN_ON_OFF,
+    254              {  // Attribute record
+    255                ATTRID_CLUSTER_REVISION,
+    256                ZCL_DATATYPE_UINT16,
+    257                ACCESS_CONTROL_READ,
+    258                (void *)&zclLight_clusterRevision_all
+    259              }
+    260            },
+    261            
+    262          #ifdef ZCL_GROUPS
+    263            {
+    264              ZCL_CLUSTER_ID_GEN_GROUPS,
+    265              {
+    266                ATTRID_GROUP_NAME_SUPPORT,
+    267                ZCL_DATATYPE_BITMAP8,
+    268                ACCESS_CONTROL_READ,
+    269                (void*)&zclLight_GroupsNameSupport_1
+    270              }
+    271            },
+    272          
+    273            {
+    274              ZCL_CLUSTER_ID_GEN_GROUPS,
+    275              {  // Attribute record
+    276                ATTRID_CLUSTER_REVISION,
+    277                ZCL_DATATYPE_UINT16,
+    278                ACCESS_CONTROL_READ,
+    279                (void *)&zclLight_clusterRevision_all
+    280              }
+    281            },
+    282          #endif  
+    283            {
+    284              ZCL_CLUSTER_ID_GEN_SCENES,
+    285              {  // Attribute record
+    286                ATTRID_CLUSTER_REVISION,
+    287                ZCL_DATATYPE_UINT16,
+    288                ACCESS_CONTROL_READ,
+    289                (void *)&zclLight_clusterRevision_all
+    290              }
+    291            }
+    292          };
+
+   \                                 In  segment CODE_C, align 1
+    293          uint8 CONST zclLight_NumAttributes_1 = ( sizeof(zclLight_Attrs_1) / sizeof(zclLight_Attrs_1[0]) );
+   \                     zclLight_NumAttributes_1:
+   \   000000   11           DB 17
+    294          
+    295          
+
+   \                                 In  segment CODE_C, align 1
+    296          CONST zclAttrRec_t zclLight_Attrs_2[] =
+   \                     zclLight_Attrs_2:
+   \   000000   0000         DW 0
+   \   000002   0000         DW 0
+   \   000004   20           DB 32
+   \   000005   01           DB 1
+   \   000006   ....         DW zclLight_ZCLVersion_2
+   \   000008   0000         DW 0
+   \   00000A   0300         DW 3
+   \   00000C   20           DB 32
+   \   00000D   01           DB 1
+   \   00000E   ....         DW zclLight_HWRevision_2
+   \   000010   0000         DW 0
+   \   000012   0400         DW 4
+   \   000014   42           DB 66
+   \   000015   01           DB 1
+   \   000016   ....         DW zclLight_ManufacturerName_2
+   \   000018   0000         DW 0
+   \   00001A   0500         DW 5
+   \   00001C   42           DB 66
+   \   00001D   01           DB 1
+   \   00001E   ....         DW zclLight_ModelId_2
+   \   000020   0000         DW 0
+   \   000022   0600         DW 6
+   \   000024   42           DB 66
+   \   000025   01           DB 1
+   \   000026   ....         DW zclLight_DateCode_2
+   \   000028   0000         DW 0
+   \   00002A   0700         DW 7
+   \   00002C   30           DB 48
+   \   00002D   01           DB 1
+   \   00002E   ....         DW zclLight_PowerSource_2
+   \   000030   0000         DW 0
+   \   000032   1000         DW 16
+   \   000034   42           DB 66
+   \   000035   03           DB 3
+   \   000036   ....         DW zclLight_LocationDescription_2
+   \   000038   0000         DW 0
+   \   00003A   1100         DW 17
+   \   00003C   30           DB 48
+   \   00003D   03           DB 3
+   \   00003E   ....         DW zclLight_PhysicalEnvironment_2
+   \   000040   0000         DW 0
+   \   000042   1200         DW 18
+   \   000044   10           DB 16
+   \   000045   03           DB 3
+   \   000046   ....         DW zclLight_DeviceEnable_2
+   \   000048   0000         DW 0
+   \   00004A   FDFF         DW 65533
+   \   00004C   21           DB 33
+   \   00004D   01           DB 1
+   \   00004E   ....         DW zclLight_clusterRevision_all
+   \   000050   0300         DW 3
+   \   000052   0000         DW 0
+   \   000054   21           DB 33
+   \   000055   03           DB 3
+   \   000056   ....         DW zclLight_IdentifyTime_2
+   \   000058   0300         DW 3
+   \   00005A   FDFF         DW 65533
+   \   00005C   21           DB 33
+   \   00005D   01           DB 1
+   \   00005E   ....         DW zclLight_clusterRevision_all
+   \   000060   0600         DW 6
+   \   000062   0000         DW 0
+   \   000064   10           DB 16
+   \   000065   05           DB 5
+   \   000066   ....         DW zclLight_OnOff_2
+   \   000068   0600         DW 6
+   \   00006A   FDFF         DW 65533
+   \   00006C   21           DB 33
+   \   00006D   01           DB 1
+   \   00006E   ....         DW zclLight_clusterRevision_all
+   \   000070   0400         DW 4
+   \   000072   0000         DW 0
+   \   000074   18           DB 24
+   \   000075   01           DB 1
+   \   000076   ....         DW zclLight_GroupsNameSupport_2
+   \   000078   0400         DW 4
+   \   00007A   FDFF         DW 65533
+   \   00007C   21           DB 33
+   \   00007D   01           DB 1
+   \   00007E   ....         DW zclLight_clusterRevision_all
+   \   000080   0500         DW 5
+   \   000082   FDFF         DW 65533
+   \   000084   21           DB 33
+   \   000085   01           DB 1
+   \   000086   ....         DW zclLight_clusterRevision_all
+    297          {
+    298            // *** General Basic Cluster Attributes ***
+    299            {
+    300              ZCL_CLUSTER_ID_GEN_BASIC,
+    301              { // Attribute record
+    302                ATTRID_BASIC_ZCL_VERSION,
+    303                ZCL_DATATYPE_UINT8,
+    304                ACCESS_CONTROL_READ,
+    305                (void *)&zclLight_ZCLVersion_2
+    306              }
+    307            },
+    308            {
+    309              ZCL_CLUSTER_ID_GEN_BASIC,             // Cluster IDs - defined in the foundation (ie. zcl.h)
+    310              {  // Attribute record
+    311                ATTRID_BASIC_HW_VERSION,            // Attribute ID - Found in Cluster Library header (ie. zcl_general.h)
+    312                ZCL_DATATYPE_UINT8,                 // Data Type - found in zcl.h
+    313                ACCESS_CONTROL_READ,                // Variable access control - found in zcl.h
+    314                (void *)&zclLight_HWRevision_2  // Pointer to attribute variable
+    315              }
+    316            },
+    317            {
+    318              ZCL_CLUSTER_ID_GEN_BASIC,
+    319              { // Attribute record
+    320                ATTRID_BASIC_MANUFACTURER_NAME,
+    321                ZCL_DATATYPE_CHAR_STR,
+    322                ACCESS_CONTROL_READ,
+    323                (void *)zclLight_ManufacturerName_2
+    324              }
+    325            },
+    326            {
+    327              ZCL_CLUSTER_ID_GEN_BASIC,
+    328              { // Attribute record
+    329                ATTRID_BASIC_MODEL_ID,
+    330                ZCL_DATATYPE_CHAR_STR,
+    331                ACCESS_CONTROL_READ,
+    332                (void *)zclLight_ModelId_2
+    333              }
+    334            },
+    335            {
+    336              ZCL_CLUSTER_ID_GEN_BASIC,
+    337              { // Attribute record
+    338                ATTRID_BASIC_DATE_CODE,
+    339                ZCL_DATATYPE_CHAR_STR,
+    340                ACCESS_CONTROL_READ,
+    341                (void *)zclLight_DateCode_2
+    342              }
+    343            },
+    344            {
+    345              ZCL_CLUSTER_ID_GEN_BASIC,
+    346              { // Attribute record
+    347                ATTRID_BASIC_POWER_SOURCE,
+    348                ZCL_DATATYPE_ENUM8,
+    349                ACCESS_CONTROL_READ,
+    350                (void *)&zclLight_PowerSource_2
+    351              }
+    352            },
+    353            {
+    354              ZCL_CLUSTER_ID_GEN_BASIC,
+    355              { // Attribute record
+    356                ATTRID_BASIC_LOCATION_DESC,
+    357                ZCL_DATATYPE_CHAR_STR,
+    358                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    359                (void *)zclLight_LocationDescription_2
+    360              }
+    361            },
+    362            {
+    363              ZCL_CLUSTER_ID_GEN_BASIC,
+    364              { // Attribute record
+    365                ATTRID_BASIC_PHYSICAL_ENV,
+    366                ZCL_DATATYPE_ENUM8,
+    367                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    368                (void *)&zclLight_PhysicalEnvironment_2
+    369              }
+    370            },
+    371            {
+    372              ZCL_CLUSTER_ID_GEN_BASIC,
+    373              { // Attribute record
+    374                ATTRID_BASIC_DEVICE_ENABLED,
+    375                ZCL_DATATYPE_BOOLEAN,
+    376                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    377                (void *)&zclLight_DeviceEnable_2
+    378              }
+    379            },
+    380            {
+    381              ZCL_CLUSTER_ID_GEN_BASIC,
+    382              {  // Attribute record
+    383                ATTRID_CLUSTER_REVISION,
+    384                ZCL_DATATYPE_UINT16,
+    385                ACCESS_CONTROL_READ,
+    386                (void *)&zclLight_clusterRevision_all
+    387              }
+    388            },
+    389          #ifdef ZCL_IDENTIFY
+    390            // *** Identify Cluster Attribute ***
+    391            {
+    392              ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    393              { // Attribute record
+    394                ATTRID_IDENTIFY_TIME,
+    395                ZCL_DATATYPE_UINT16,
+    396                (ACCESS_CONTROL_READ | ACCESS_CONTROL_WRITE),
+    397                (void *)&zclLight_IdentifyTime_2
+    398              }
+    399            },
+    400            {
+    401              ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    402              {  // Attribute record
+    403                ATTRID_CLUSTER_REVISION,
+    404                ZCL_DATATYPE_UINT16,
+    405                ACCESS_CONTROL_READ,
+    406                (void *)&zclLight_clusterRevision_all
+    407              }
+    408            },  
+    409          #endif
+    410          
+    411            // *** On/Off Cluster Attributes ***
+    412            {
+    413              ZCL_CLUSTER_ID_GEN_ON_OFF,
+    414              { // Attribute record
+    415                ATTRID_ON_OFF,
+    416                ZCL_DATATYPE_BOOLEAN,
+    417                ACCESS_CONTROL_READ | ACCESS_REPORTABLE,
+    418                (void *)&zclLight_OnOff_2
+    419              }
+    420            },
+    421            {
+    422              ZCL_CLUSTER_ID_GEN_ON_OFF,
+    423              {  // Attribute record
+    424                ATTRID_CLUSTER_REVISION,
+    425                ZCL_DATATYPE_UINT16,
+    426                ACCESS_CONTROL_READ,
+    427                (void *)&zclLight_clusterRevision_all
+    428              }
+    429            },
+    430            
+    431          #ifdef ZCL_GROUPS
+    432            {
+    433              ZCL_CLUSTER_ID_GEN_GROUPS,
+    434              {
+    435                ATTRID_GROUP_NAME_SUPPORT,
+    436                ZCL_DATATYPE_BITMAP8,
+    437                ACCESS_CONTROL_READ,
+    438                (void*)&zclLight_GroupsNameSupport_2
+    439              }
+    440            },
+    441          
+    442            {
+    443              ZCL_CLUSTER_ID_GEN_GROUPS,
+    444              {  // Attribute record
+    445                ATTRID_CLUSTER_REVISION,
+    446                ZCL_DATATYPE_UINT16,
+    447                ACCESS_CONTROL_READ,
+    448                (void *)&zclLight_clusterRevision_all
+    449              }
+    450            },
+    451          #endif  
+    452            {
+    453              ZCL_CLUSTER_ID_GEN_SCENES,
+    454              {  // Attribute record
+    455                ATTRID_CLUSTER_REVISION,
+    456                ZCL_DATATYPE_UINT16,
+    457                ACCESS_CONTROL_READ,
+    458                (void *)&zclLight_clusterRevision_all
+    459              }
+    460            }
+    461          };
+
+   \                                 In  segment CODE_C, align 1
+    462          uint8 CONST zclLight_NumAttributes_2 = ( sizeof(zclLight_Attrs_2) / sizeof(zclLight_Attrs_2[0]) );
+   \                     zclLight_NumAttributes_2:
+   \   000000   11           DB 17
+    463          
+    464          
+    465          /*********************************************************************
+    466           * SIMPLE DESCRIPTOR
+    467           */
+    468          // This is the Cluster ID List and should be filled with Application
+    469          // specific cluster IDs.
+
+   \                                 In  segment XDATA_ROM_C, align 1
+    470          const cId_t zclLight_InClusterList[] =
+   \                     zclLight_InClusterList:
+   \   000000   0000         DW 0
+   \   000002   0300         DW 3
+   \   000004   0400         DW 4
+   \   000006   0500         DW 5
+   \   000008   0600         DW 6
+    471          {
+    472            ZCL_CLUSTER_ID_GEN_BASIC,
+    473            ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    474            ZCL_CLUSTER_ID_GEN_GROUPS,
+    475            ZCL_CLUSTER_ID_GEN_SCENES,
+    476            ZCL_CLUSTER_ID_GEN_ON_OFF
+    477          };
+    478          
+    479          #define ZCLLIGHT_MAX_INCLUSTERS   (sizeof(zclLight_InClusterList) / sizeof(zclLight_InClusterList[0]))
+    480           
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    481          SimpleDescriptionFormat_t zclLight_SimpleDesc_1 =
+   \                     zclLight_SimpleDesc_1:
+   \   000000                DS 12
+   \   00000C                REQUIRE `?<Initializer for zclLight_SimpleDesc_1>`
+   \   00000C                REQUIRE __INIT_XDATA_I
+    482          {
+    483            LIGHT_ENDPOINT_1,                  //  int Endpoint;
+    484            ZCL_HA_PROFILE_ID,                 //  uint16 AppProfId;
+    485            ZCL_HA_DEVICEID_ON_OFF_LIGHT,      //  uint16 AppDeviceId;
+    486            LIGHT_DEVICE_VERSION,              //  int   AppDevVer:4;
+    487            LIGHT_FLAGS,                       //  int   AppFlags:4;
+    488            ZCLLIGHT_MAX_INCLUSTERS,           //  byte  AppNumInClusters;
+    489            (cId_t *)zclLight_InClusterList,   //  byte *pAppInClusterList;
+    490            0,                                 //  byte  AppNumInClusters;
+    491            NULL                               //  byte *pAppInClusterList;
+    492          };
+    493          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    494          SimpleDescriptionFormat_t zclLight_SimpleDesc_2 =
+   \                     zclLight_SimpleDesc_2:
+   \   000000                DS 12
+   \   00000C                REQUIRE `?<Initializer for zclLight_SimpleDesc_2>`
+   \   00000C                REQUIRE __INIT_XDATA_I
+    495          {
+    496            LIGHT_ENDPOINT_2,                  //  int Endpoint;
+    497            ZCL_HA_PROFILE_ID,                 //  uint16 AppProfId;
+    498            ZCL_HA_DEVICEID_ON_OFF_LIGHT,      //  uint16 AppDeviceId;
+    499            LIGHT_DEVICE_VERSION,              //  int   AppDevVer:4;
+    500            LIGHT_FLAGS,                       //  int   AppFlags:4;
+    501            ZCLLIGHT_MAX_INCLUSTERS,           //  byte  AppNumInClusters;
+    502            (cId_t *)zclLight_InClusterList,   //  byte *pAppInClusterList;
+    503            0,                                 //  byte  AppNumInClusters;
+    504            NULL                               //  byte *pAppInClusterList;
+    505          };
+    506          
+    507          /*********************************************************************
+    508           * GLOBAL FUNCTIONS
+    509           */
+    510          
+    511          /*********************************************************************
+    512           * LOCAL FUNCTIONS
+    513           */
+    514           
+    515          /*********************************************************************
+    516           * @fn      zclLight_ResetAttributesToDefaultValues
+    517           *
+    518           * @brief   Reset all writable attributes to their default values.
+    519           *
+    520           * @param   none
+    521           *
+    522           * @return  none
+    523           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    524          void zclLight_ResetAttributesToDefaultValues_1(void)
+   \                     zclLight_ResetAttributesToDefaultValues_1:
+    525          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    526            int i;
+    527            
+    528            zclLight_LocationDescription_1[0] = 16;
+   \   000004   90....       MOV       DPTR,#zclLight_LocationDescription_1
+   \   000007   7410         MOV       A,#0x10
+   \   000009   F0           MOVX      @DPTR,A
+    529            for (i = 1; i <= 16; i++)
+    530            {
+    531              zclLight_LocationDescription_1[i] = ' ';
+   \   00000A   7420         MOV       A,#0x20
+   \   00000C   A3           INC       DPTR
+   \   00000D   7810         MOV       R0,#0x10
+   \                     ??zclLight_ResetAttributesToDefaultValues_1_0:
+   \   00000F   F0           MOVX      @DPTR,A
+   \   000010   A3           INC       DPTR
+   \   000011   D8FC         DJNZ      R0,??zclLight_ResetAttributesToDefaultValues_1_0
+    532            }
+    533            
+    534            zclLight_PhysicalEnvironment_1 = DEFAULT_PHYSICAL_ENVIRONMENT;
+   \   000013   90....       MOV       DPTR,#zclLight_PhysicalEnvironment_1
+   \   000016   E4           CLR       A
+   \   000017   F0           MOVX      @DPTR,A
+    535            zclLight_DeviceEnable_1 = DEFAULT_DEVICE_ENABLE_STATE;
+   \   000018   90....       MOV       DPTR,#zclLight_DeviceEnable_1
+   \   00001B   04           INC       A
+   \   00001C   F0           MOVX      @DPTR,A
+    536            
+    537          #ifdef ZCL_IDENTIFY
+    538            zclLight_IdentifyTime_1 = DEFAULT_IDENTIFY_TIME;
+   \   00001D   90....       MOV       DPTR,#zclLight_IdentifyTime_1
+   \   000020   E4           CLR       A
+   \   000021   F0           MOVX      @DPTR,A
+   \   000022   A3           INC       DPTR
+   \   000023   F0           MOVX      @DPTR,A
+    539          #endif
+    540          
+    541            zclLight_OnOff_1 = DEFAULT_ON_OFF_STATE;
+   \   000024   90....       MOV       DPTR,#zclLight_OnOff_1
+   \   000027                REQUIRE ?Subroutine0
+   \   000027                ; // Fall through to label ?Subroutine0
+    542            
+    543          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   F0           MOVX      @DPTR,A
+   \   000001   D083         POP       DPH
+   \   000003   D082         POP       DPL
+   \   000005   02....       LJMP      ?BRET
+    544          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    545          void zclLight_ResetAttributesToDefaultValues_2(void)
+   \                     zclLight_ResetAttributesToDefaultValues_2:
+    546          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    547            int i;
+    548            
+    549            zclLight_LocationDescription_2[0] = 16;
+   \   000004   90....       MOV       DPTR,#zclLight_LocationDescription_2
+   \   000007   7410         MOV       A,#0x10
+   \   000009   F0           MOVX      @DPTR,A
+    550            for (i = 1; i <= 16; i++)
+    551            {
+    552              zclLight_LocationDescription_2[i] = ' ';
+   \   00000A   7420         MOV       A,#0x20
+   \   00000C   A3           INC       DPTR
+   \   00000D   7810         MOV       R0,#0x10
+   \                     ??zclLight_ResetAttributesToDefaultValues_2_0:
+   \   00000F   F0           MOVX      @DPTR,A
+   \   000010   A3           INC       DPTR
+   \   000011   D8FC         DJNZ      R0,??zclLight_ResetAttributesToDefaultValues_2_0
+    553            }
+    554            
+    555            zclLight_PhysicalEnvironment_2 = DEFAULT_PHYSICAL_ENVIRONMENT;
+   \   000013   90....       MOV       DPTR,#zclLight_PhysicalEnvironment_2
+   \   000016   E4           CLR       A
+   \   000017   F0           MOVX      @DPTR,A
+    556            zclLight_DeviceEnable_2 = DEFAULT_DEVICE_ENABLE_STATE;
+   \   000018   90....       MOV       DPTR,#zclLight_DeviceEnable_2
+   \   00001B   04           INC       A
+   \   00001C   F0           MOVX      @DPTR,A
+    557            
+    558          #ifdef ZCL_IDENTIFY
+    559            zclLight_IdentifyTime_2 = DEFAULT_IDENTIFY_TIME;
+   \   00001D   90....       MOV       DPTR,#zclLight_IdentifyTime_2
+   \   000020   E4           CLR       A
+   \   000021   F0           MOVX      @DPTR,A
+   \   000022   A3           INC       DPTR
+   \   000023   F0           MOVX      @DPTR,A
+    560          #endif
+    561          
+    562            zclLight_OnOff_2 = DEFAULT_ON_OFF_STATE;
+   \   000024   90....       MOV       DPTR,#zclLight_OnOff_2
+   \   000027   80..         SJMP      ?Subroutine0
+    563            
+    564          }
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclLight_PhysicalEnvironment`:
+   \   000000   0B           DB 11
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclLight_PhysicalEnvironment_1`:
+   \   000000   0B           DB 11
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclLight_SimpleDesc_1>`:
+   \   000000   08           DB 8
+   \   000001   0401         DW 260
+   \   000003   0001         DW 256
+   \   000005   01           DB 1
+   \   000006   05           DB 5
+   \   000007   ....         DW zclLight_InClusterList
+   \   000009   00           DB 0
+   \   00000A   0000         DW 0H
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclLight_SimpleDesc_2>`:
+   \   000000   09           DB 9
+   \   000001   0401         DW 260
+   \   000003   0001         DW 256
+   \   000005   01           DB 1
+   \   000006   05           DB 5
+   \   000007   ....         DW zclLight_InClusterList
+   \   000009   00           DB 0
+   \   00000A   0000         DW 0H
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??zclLight_ResetAttributesToDefaultValues_1::?r`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclLight_ResetAttributesToDefaultValues_1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??zclLight_ResetAttributesToDefaultValues_2::?r`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    zclLight_ResetAttributesToDefaultValues_2
+    565          
+    566          
+    567          #ifdef ZCL_REPORT
+    568          zclConfigReportRec_t zclLight_ConfigReportRecs_Rpt1[] =
+    569          {
+    570            {
+    571              ZCL_CLUSTER_ID_GEN_ON_OFF,  //clusterID
+    572              0xFFFF,                     // timeup
+    573              (void *)&zclLight_OnOff_1,  // lastReportValue
+    574              { // CfgReportRec
+    575                ZCL_REPORT_SEND,          // direction
+    576                ATTRID_ON_OFF,            // attrID
+    577                ZCL_DATATYPE_BOOLEAN,     // dataType
+    578                0,                        // minReportInt
+    579                0xFFFF,                   // maxReportInt
+    580                0,                        // timeoutPeriod
+    581                NULL                      // *reportableChange, no need to set for DISCRETE datatype
+    582              }
+    583            }
+    584          };
+    585          
+    586          zclConfigReportRec_t zclLight_ConfigReportRecs_Rpt2[] =
+    587          {
+    588            {
+    589              ZCL_CLUSTER_ID_GEN_ON_OFF,  //clusterID
+    590              0xFFFF,                     // timeup
+    591              (void *)&zclLight_OnOff_2,  // lastReportValue
+    592              { // CfgReportRec
+    593                ZCL_REPORT_SEND,          // direction
+    594                ATTRID_ON_OFF,            // attrID
+    595                ZCL_DATATYPE_BOOLEAN,     // dataType
+    596                0,                        // minReportInt
+    597                0xFFFF,                   // maxReportInt
+    598                0,                        // timeoutPeriod
+    599                NULL                      // *reportableChange, no need to set for DISCRETE datatype
+    600              }
+    601            }
+    602          };
+    603          
+    604          uint8 CONST zclLight_NumConfigReportRecs_1 = ( sizeof(zclLight_ConfigReportRecs_Rpt1) / sizeof(zclLight_ConfigReportRecs_Rpt1[0]) );
+    605          uint8 CONST zclLight_NumConfigReportRecs_2 = ( sizeof(zclLight_ConfigReportRecs_Rpt2) / sizeof(zclLight_ConfigReportRecs_Rpt2[0]) );
+    606          
+    607          #endif  // ZCL_REPORT
+    608          /****************************************************************************
+    609          ****************************************************************************/
+
+   Maximum stack usage in bytes:
+
+   ISTACK Function
+   ------ --------
+      2   zclLight_ResetAttributesToDefaultValues_1
+      2   zclLight_ResetAttributesToDefaultValues_2
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       1  ?<Initializer for zclLight_PhysicalEnvironment
+       1  ?<Initializer for zclLight_PhysicalEnvironment_1
+      12  ?<Initializer for zclLight_SimpleDesc_1>
+      12  ?<Initializer for zclLight_SimpleDesc_2>
+       8  ?Subroutine0
+     136  zclLight_Attrs_1
+     136  zclLight_Attrs_2
+      17  zclLight_DateCode_1
+      17  zclLight_DateCode_2
+       1  zclLight_DeviceEnable_1
+       1  zclLight_DeviceEnable_2
+       1  zclLight_GroupsNameSupport_1
+       1  zclLight_GroupsNameSupport_2
+       1  zclLight_HWRevision_1
+       1  zclLight_HWRevision_2
+       2  zclLight_IdentifyTime_1
+       2  zclLight_IdentifyTime_2
+      10  zclLight_InClusterList
+      17  zclLight_LocationDescription_1
+      17  zclLight_LocationDescription_2
+      17  zclLight_ManufacturerName_1
+      17  zclLight_ManufacturerName_2
+      17  zclLight_ModelId_1
+      17  zclLight_ModelId_2
+       1  zclLight_NumAttributes_1
+       1  zclLight_NumAttributes_2
+       1  zclLight_OnOff_1
+       1  zclLight_OnOff_2
+       1  zclLight_PhysicalEnvironment_1
+       1  zclLight_PhysicalEnvironment_2
+       1  zclLight_PowerSource_1
+       1  zclLight_PowerSource_2
+      39  zclLight_ResetAttributesToDefaultValues_1
+       6  zclLight_ResetAttributesToDefaultValues_1::?relay
+      41  zclLight_ResetAttributesToDefaultValues_2
+       6  zclLight_ResetAttributesToDefaultValues_2::?relay
+      12  zclLight_SimpleDesc_1
+      12  zclLight_SimpleDesc_2
+       1  zclLight_ZCLVersion_1
+       1  zclLight_ZCLVersion_2
+       2  zclLight_clusterRevision_all
+
+ 
+  88 bytes in segment BANKED_CODE
+  12 bytes in segment BANK_RELAYS
+ 274 bytes in segment CODE_C
+  26 bytes in segment XDATA_I
+  26 bytes in segment XDATA_ID
+ 120 bytes in segment XDATA_ROM_C
+  44 bytes in segment XDATA_Z
+ 
+ 312 bytes of CODE     memory
+ 120 bytes of CONST    memory
+  88 bytes of HUGECODE memory
+  70 bytes of XDATA    memory
+
+Errors: none
+Warnings: none
